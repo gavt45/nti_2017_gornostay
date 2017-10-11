@@ -1,2 +1,4 @@
 # nti_2017_gornostay
-lalalala tralala
+
+Проверил задачи:
+- 1(все верно)
