@@ -1,8 +1,10 @@
 import math
 x1,y1,x2,y2,x3,y3=0, 2, 2, 0, 2, 2#input().split()
 dx,dy=3, 1#input().split()
-
-# https://telegram.org/dl/desktop/win
+"""
+Этот код не работает 
+Я его не дописал
+"""
 
 """
 x1,y1 --- a
