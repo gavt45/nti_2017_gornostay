@@ -1,5 +1,6 @@
 import math
 x1,y1,x2,y2,x3,y3=0, 2, 2, 0, 2, 2#input().split()
+dots=[(x1,y1),(x2,y2),(x3,y3)]
 dx,dy=3, 1#input().split()
 """
 Этот код не работает 
@@ -24,6 +25,7 @@ def get_angle(dx,dy,x1,y1,x2,y2):
 	c=border_length(x1,y1,x2,y2)
 	cosa = (b**2+c**2-a**2)/(2*b*c)
 	return math.acos(cosa)
+"""
 dangles=[]
 dangles.append(get_angle(dx,dy,x1,y1,x2,y2))
 dangles.append(get_angle(dx,dy,x2,y2,x3,y3))
@@ -42,6 +44,18 @@ lens.append(border_length(x3,y3,x1,y1))
 print "dangles: ",map(deg, dangles)
 
 print "angles: ",map(deg, angles)
+"""
+
+def get_blizh():
+    lengths = []
+    blizh = []
+    for dot1 in dots:
+        lengths.append(border_length(dx,dy,dot[0],dot[1]))
+    lengths.remove(max(lengths))
+    for dot in dots:
+        if lengths.__contains__(border_length(dx,dy,dot[0],dot[1])):
+            blizh.append(dot)
+    return blizh
 
 for i in range(0,3):
 	print "angle:",angles[i],";dangle:",dangles[i]
