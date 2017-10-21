@@ -1,19 +1,25 @@
 n,k = 9, 3
 d=[1,3,4,5,7,8,9,10,13]
 
-otr_length = int((d[-1])/k)
+otr_length = 1
 #print("otr_length:",otr_length)
-
-while otr_length > 0:
+while otr_length <= k:
     jump_dots=[]
     jump_count=0
     #print("in while: ",jump_dots,jump_count)
+    if jump_count != 0 and jump_dots[-1] == d[-1]:
+        print(jump_count-1)
+        exit(0)
     for dot in range(1,d[-1],otr_length):
-        #print("dot:{}; dots:{}".format(dot, jump_dots))
+        #print("dot:{}; dots:{}; otr_length:{}".format(dot, jump_dots, otr_length))
         if not dot in d:
+            #print("fot not in d")
+            del jump_dots, jump_count
+            jump_dots=[]
+            jump_count=0
             break
         else:
-            otr_length -= 1
-            jump_count+=1
+            jump_dots.append(dot)
+            jump_count += 1
+    otr_length += 1
 print(jump_count)
-            
