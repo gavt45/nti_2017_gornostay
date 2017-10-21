@@ -1,14 +1,6 @@
 n, k = list(map(int, input().split()))
 points = list(map(int, input().split()))
 
-"""
-def parse_data(data):
-	lines = data.split('\n')
-	n, k = list(map(int, lines[0].split()))
-	points = list(map(int, lines[1].split()))
-	return n, k, points
-"""
-
 def solve():
 	#print(n, k)
 	#print(points)
