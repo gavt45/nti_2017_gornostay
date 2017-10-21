@@ -1,5 +1,5 @@
-n,k = 9, 3
-d=[1,3,4,5,7,8,9,10,13]
+n,k = list(map(int,input().split()))
+d=list(map(int,input().split()))
 
 otr_length = 1
 #print("otr_length:",otr_length)
